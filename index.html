@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Food Court Menu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">FOOD COURT<small>Fresh, local, made for you</small></div><div style="display:flex;gap:6px;align-items:center"><button class="pill" id="back" style="display:none;cursor:pointer;color:var(--text)" onclick="cur=-1;render();window.scrollTo({top:0})">← All stalls</button><div class="pill" id="tbl">Menu</div></div></header>
+<div id="note"></div>
+<div id="home"></div>
+<div id="mv">
+<div class="tabs" id="tabs"></div>
+<div class="hero" id="hero"></div>
+<svg class="wave" viewBox="0 0 400 50" preserveAspectRatio="none"><path d="M0 0 C60 50 140 50 200 25 C260 0 340 5 400 30 L400 50 L0 50Z" fill="var(--card)"/></svg>
+<section class="menu"><div class="grid" id="grid"></div></section>
+</div>
+<footer>Tap any item for full details<div hidden><button id="eb"></button><div id="tools"></div></div></footer>
+<div id="bar" onclick="openCart()"></div>
+<div id="ov" onclick="if(event.target===this)closeIt()"><div id="sheet"></div></div>
+
+<script src="menu-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
